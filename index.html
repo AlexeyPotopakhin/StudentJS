@@ -8,14 +8,19 @@
 	</head>
 	<body>
 		<script>
+		    // Inheritance
 			var alexey = new Student("Alexey", 20);
 			alexey.live();
 			alexey.study();
 			
+			// Original function
 			console.log(duckType(alexey));
-			
 			var man = new Man("John", 25);
 			console.log(duckType(man));
+			
+			// Modified function
+			console.log(duckTypeModified.call(alexey));
+			console.log(duckTypeModified.call(man));
 		</script>
 	</body>
 </html>
