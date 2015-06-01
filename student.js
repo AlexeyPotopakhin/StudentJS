@@ -28,7 +28,14 @@ Student.prototype.study = function() {
 	console.log("Student " + this.name + " is studying");
 };
 
+// Original function
 function duckType(object) {
 	if("study" in object) return "Student";
+	else return "Man";
+}
+
+// Modified function
+function duckTypeModified() {
+	if(this.study !== undefined) return "Student";
 	else return "Man";
 }
